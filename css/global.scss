@@ -1,0 +1,49 @@
+$background-color: #FFFFFF;
+$logo-color: #335576;
+$active-page-color: #DB7A4E;
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: $background-color;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+        color: $logo-color;
+        font-size: 24px;
+    }
+
+    .nav-links {
+        list-style: none;
+        padding: 0;
+        margin-right: 5rem;
+        display: flex;
+        justify-content: flex-end; 
+
+        li {
+            margin-left: 10px; 
+
+            &:first-child {
+                margin-left: 0; 
+            }
+
+            a {
+                text-decoration: none;
+                color: $logo-color;
+
+                &.active {
+                    border-bottom: 2px solid $active-page-color;
+                }
+            }
+        }
+    }
+}
